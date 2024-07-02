@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Issue Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body onload="fetchIssue()">
+    <div class="navbar">
+        <div class="n-left">
+            <h3>Practice Project</h3>
+        </div>
+        <div class="n-right">
+            <a href="index.html" style="color: #667BC6;">Add Issue</a>
+            <a href="view.html">View Issue Database</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>JavaScript Issue Tracker</h1>
+        <div class="wrapper">
+            <form action="" id="inputForm">
+                <input type="text" name="desc" id="desc" placeholder="Issue Discription" required><br>
+                <select name="severity" id="severity" >
+                    <option value="Low">Severity : Low</option>
+                    <option value="Medium">Severity : Medium</option>
+                    <option value="High">Severity : High</option>
+                </select><br>
+                <input type="text" name="assignedTo" id="assignedTo" placeholder="Assigned To" required><br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- chanceJS -->
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
