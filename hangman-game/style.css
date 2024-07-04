@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background-color: rgb(94, 159, 228);
+}
+.container{
+    width: 850px;
+    background-color: white;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+.hangman-box img{
+    max-width: 270px;
+}
+.hangman-box h1{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 10px;
+}
+.word-display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+.word-display .letter{
+    width: 28px;
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.word-display .guessed{
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+.game-box h4{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.game-box h4 b{
+    font-weight: 600;
+}
+.game-box .guesses-text b{
+    color: red;
+}
+.game-box .keyboard{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+.keyboard button{
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: rgb(88, 88, 213);
+    width: calc(100%/9 - 5px);
+    font-family: "Ubuntu", sans-serif;
+}
+.keyboard button:hover{
+    background-color: rgb(105, 105, 250);
+}
+.keyboard button[disabled]{
+    opacity: .6;
+    pointer-events: none;
+
+}
+.game-model{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity .4s ease;
+}
+.game-model.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.game-model .content{
+    max-width: 420px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+.game-model img{
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+.game-model h4{
+    font-size: 1.53rem;
+}
+.game-model p{
+    font-size: 1.53rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.game-model p b{
+    color: red;
+    font-weight: 600;
+}
+.game-model button{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    background-color: rgb(88, 88, 213);
+    font-family: "Ubuntu", sans-serif;
+}
+.game-model button:hover{
+    background-color: rgb(105, 105, 250);
+}
+
+@media (max-width: 782px) {
+    .container{
+        flex-direction: column;
+        padding: 30px 45px;
+        align-items: center;
+    }
+    .hangman-box img{
+        max-width: 200px;
+    }
+    .hangman-box h1{
+        display: none;
+    }
+    
+}
